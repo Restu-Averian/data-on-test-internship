@@ -46,6 +46,9 @@ function LoginView(props) {
                     <button className='bg-[#665EFF] text-white px-4 py-2'>Login</button>
                 </form>
             </div>
+            <em>
+                *Bisa login dengan sembarang akun
+            </em>
         </div>
     );
 }
