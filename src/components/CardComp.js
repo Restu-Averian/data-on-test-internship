@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect }  from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function CardComp(props) {
@@ -6,6 +6,13 @@ function CardComp(props) {
     const moveToCityNews = ()=>{
         navigate("/city-news")
     }
+    useEffect(
+        ()=>{
+            if(!localStorage.getItem("login")){
+                navigate("/login")
+            }
+        }
+    )
     const LogOut  = ()=>{
         localStorage.removeItem("login")
         navigate("/login")
