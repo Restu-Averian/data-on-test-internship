@@ -11,6 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+  .input{
+    @apply px-4 py-1 border focus:border-2  focus:border-[#665EFF] duration-300 transition-all outline-0
+  }
+}
