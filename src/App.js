@@ -1,6 +1,6 @@
 import './App.css';
 import HomeView from './views/HomeView';
-import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import LoginView from './views/LoginView';
 import CityNews from './views/CityNews';
 function App() {
