@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function HomeComp(props) {
-    // useEffect(
-    //     ()=>{
-    //         if(localStorage.getItem("login")){
-
-    //         }
-    //     }
-    // )
-    
+    let navigate = useNavigate()
+    useEffect(
+        ()=>{
+            if(!localStorage.getItem("login")){
+                navigate("/login")
+            }
+        }
+    )
+   
+    const backBtn = ()=>{
+        navigate("/")
+    }
     return (
         <div className='text-white relative'>
-            <i class="fa-solid fa-arrow-left"></i>
+            <i onClick={backBtn} className="cursor-pointer fa-solid fa-arrow-left"></i>
             <h1 className='text-2xl'>City News</h1>
-
             {/* items1 */}
             <div className='pt-10 pb-36'>
                 <div className='relative '>

@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeComp from '../components/HomeComp';
+import CardComp from '../components/CardComp';
 
 function HomeView(props) {
     return (
         <div>
-            <HomeComp />
+            <CardComp />
         </div>
     );
 }
